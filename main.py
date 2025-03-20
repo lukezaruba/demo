@@ -70,5 +70,10 @@ def fetch_data(table_name):
             return cur.fetchone()[0]
 
 
+@app.route("/map")
+def map():
+    return render_template("map.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
